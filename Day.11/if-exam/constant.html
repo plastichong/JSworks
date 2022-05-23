@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상수 사용</title>
+    <script>
+        // let month = 12;
+        const MONTH = 12;
+        //상수는 대문자로 표기
+        //상수는 변경해서는 안되는 진리나 사실을 표현.
+        //재선언 하거나 재할당할 수 없다
+        
+
+        console.log("1년은 " + MONTH + "달 입니다.");
+
+        //원의 둘레와 넓이를 계산하는 프로그램
+        //원의 둘레는 2*PI*반지름
+        //원의 넓이는 PI * 반지름의 제곱
+        const PI = 3.14;
+        let  radius = 20; //반지름
+
+
+        let circum = 0.0; //둘레
+
+        let circleAera = 0.0; //원의 면적
+
+        // 재할당
+
+        radius = 5;
+
+        circum = 2 * PI * radius;
+
+        console.log(circum);
+
+        circleAera = PI * (radius * radius);
+
+        console.log(circleAera);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

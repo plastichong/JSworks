@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>안전 속도(if문)</title>
+</head>
+<body>
+    <script>
+        //자동차 속도가 50km/s 이상이면
+        //안전 속도 위반! 과태료 10만원 부과대상 출력
+        
+
+        let limit_speed = 50;
+        let your_speed = parseInt(prompt("속도"));
+
+        if(your_speed >= limit_speed){
+            document.write("안전 속도 위반! 과태료 10만원 부과대상<br>");
+        }
+        else{
+            document.write("안전속도 준수!<br>");
+
+        }
+        document.write(" 당신의 속도는 "+ your_speed + "km 입니다.");
+    </script>
+    
+</body>
+</html>

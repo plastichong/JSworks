@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let key;
+        while(true){
+            key = prompt("계속 반복할까요? ","Y/N");
+            if(key == 'y' || 'Y' == key){
+            alert("계속 반복합니다.");
+            }else if(key == 'n' || 'N' == key){
+                alert("반복을 중단합니다.");
+                break;
+            }else{
+                alert("키를 잘못 누르셨습니다.");
+            }
+        }
+        document.write("프로그램 종료!")
+
+
+
+    </script>
+    
+</body>
+</html>
