@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onCick 속성</title>
+    <style>
+        /* p{color: brown;font-weight: bold;} */
+    </style>
+</head>
+<body>
+
+    <button type="button" onclick="fnCheck()">로그인</button>
+    <P id = "demo"></P>
+    <script>
+
+        function fnCheck(){
+            // alert("hi")
+            // document.write("hi");
+            // document.getElementById("id 이름");-함수
+            // innerHTML - html을 적용하는 속성(property)
+
+            let str = document.getElementById("demo")
+            
+            str.innerHTML = "아이디나 비밀번호를 확인해주세요"
+            str.style.color = "red";
+
+            // document.getElementById("demo").innerHTML = "아이디나 비밀번호를 확인해주세요"
+        }
+
+        
+    </script>
+    
+</body>
+</html>

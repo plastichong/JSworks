@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My web page</h1>
+    
+    <p id = "myP">This is a p element.</p>
+    
+    <div id = "myDiv">
+        This is a div element.
+    </div>
+    
+    
+    <script>
+        
+       let myP = document.getElementById("myP");
+       let myDiv =  document.getElementById("myDiv");
+       
+       myP.innerHTML = "Hello Dolly.";
+       myP.style.color = "red";
+       myP.style.fontWeight = "bold";
+       
+
+       myDiv.innerHTML = "how are you?";
+       myDiv.style.color = "#00f"
+
+    </script>
+
+</body>
+</html>
