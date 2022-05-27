@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>최대값</title>
+</head>
+<body>
+    <script>
+
+
+        //난수로 배열 초기화        
+
+        let num = new Array(7);
+        
+        for(i=0;i<num.length;i++){
+            num[i] = parseInt(Math.random()*45+1)
+        }
+        console.log(num);
+        
+        //최대값 찾아 출력하기
+
+        let maxV = num[0];
+        
+        for(i=0;i<num.length;i++){
+            if(maxV < num[i]){
+                maxV = num[i];
+            }
+        }
+
+        console.log(maxV);
+
+
+
+
+    </script>
+    
+</body>
+</html>

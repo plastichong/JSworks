@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주사위</title>
+</head>
+<body>
+
+    <script>
+
+
+   
+            
+        //두 수의 합이 8이면 "Eight Thrown!", 11이면 "Eleven Thrown!!"
+        //두 수의 눈이 같으면 "Double Thron!!"
+        for(i=0;i<=10;i++){
+            let dice1 = Math.floor(Math.random()*6+1);
+            let dice2 = Math.floor(Math.random()*6+1);
+         if(dice1+dice2 == 8){
+            document.write(dice1+", "+dice2+" Eight Thrown! <br>");
+         }   else if(dice1+dice2 == 11){
+            document.write(dice1+", "+dice2+" Eleven Thrown!! <br>");
+         }  else if(dice1==dice2){
+            document.write(dice1+", "+dice2+" Double Thron!! <br>");
+         } else   document.write(dice1+", "+dice2+"<br>");
+        }
+    
+
+     
+
+    </script>
+    
+</body>
+</html>

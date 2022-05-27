@@ -13,6 +13,7 @@
 
     <button type="button" onclick="fnCheck()">로그인</button>
     <P id = "demo"></P>
+    <p id = "meme"></p>
     <script>
 
         function fnCheck(){
@@ -22,9 +23,13 @@
             // innerHTML - html을 적용하는 속성(property)
 
             let str = document.getElementById("demo")
+
+            let str2 = document.getElementById("meme");
             
-            str.innerHTML = "아이디나 비밀번호를 확인해주세요"
+            str.innerHTML = "아이디나 비밀번호를 확인해주세요";
             str.style.color = "red";
+            srt2.innerHTML = "why?";
+            document.getElementById("meme").innerHTML = "hey!";
 
             // document.getElementById("demo").innerHTML = "아이디나 비밀번호를 확인해주세요"
         }
