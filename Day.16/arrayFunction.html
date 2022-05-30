@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let number = [1, 2, 3];
+
+        number.push(4);
+
+
+        for(i=0;i<number.length;i++){
+            document.write(number[i]+" ");
+        }
+
+        console.log(number);
+        document.write("<br>");
+
+        // for ~ in 문으로 출력
+
+        for(let item in number){
+            document.write(number[item]+" ");
+        }
+        document.write("<br>");
+        number.pop(0,0)
+        
+        for(let item in number){
+            document.write(number[item]+" ");
+        }
+        document.write("<br>");
+        
+        number.unshift(0);
+        document.write("맨 앞 0 추가 "+number+"<br>");
+
+       number.shift(0)
+       document.write("맨 앞 0 제거 "+number+"<br>");
+
+       number.splice()
+
+    </script>
+    
+</body>
+</html>

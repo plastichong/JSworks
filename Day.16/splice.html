@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>splice</title>
+</head>
+<body>
+    <script>
+        let arr = ["bear","chicken","dog","hose"];
+        
+        arr.splice(1,0,"pig")
+
+        document.write(arr);
+        document.write("<br>");
+        document.write(arr.length+"<br>");
+
+        for(let item in arr){
+            console.log(arr[item]);
+        }
+
+        //concat 배열 합치기
+        //join 배열 연결
+
+        let number=[1,2,3];
+        let char=["a","b","c"];
+
+        let list = number.concat(char);
+
+        console.log(number.concat(char));
+        console.log(list);
+        document.write(list.join());
+    </script>
+    
+</body>
+</html>
