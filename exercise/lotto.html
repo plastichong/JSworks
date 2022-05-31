@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        section{
+            margin: 0 auto;
+            text-align: center;
+        }
+        p{font-size: 1.2em;}
+
+    </style>
+</head>
+<body>
+    <section>
+        <h1>로또 추첨</h1>
+        <p id = "myId"></p>
+    </section>
+    
+    <script>
+
+        let arr = new Array(6);
+        for(i=0;i<arr.length;i++){
+            arr[i]=Math.floor(Math.random()*45+1)
+            for(j=0;j<i;j++){
+                if(arr[i]==arr[j]){
+                    i--;
+                }
+            }
+        }
+        
+        // arr[0].style.color = "red";
+        document.getElementById("myId").innerHTML = "번호 : "+arr;
+        
+       
+
+    </script>
+    
+</body>
+</html>

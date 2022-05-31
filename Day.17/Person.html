@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체의 생성자 함수</title>
+</head>
+<body>
+
+    <script>
+
+        //생성자를 사용한 객체의 이름은 첫글자를 대문자로
+        function Person(name,age,gender){
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.play = function(){
+                return "제육볶음을 잘 먹습니다.<br>";
+            }
+        }
+
+        let p1 = new Person("손홍훈",28,"남")
+        
+        document.write("이름 : "+p1.name+"<br>");
+        document.write("나이 : "+p1.age+"<br>");
+        document.write("성별 : "+p1.gender+"<br>");
+        document.write(p1.play());
+        
+        let p2 = new Person("최민정",25,"여");
+        
+        document.write("이름 : "+p2.name+"<br>");
+        document.write("나이 : "+p2.age+"<br>");
+        document.write("성별 : "+p2.gender+"<br>");
+        document.write(p1.play());
+        
+        let p3 = new Person("손흥민",31,"남")
+        
+        document.write("이름 : "+p3.name+"<br>");
+        document.write("나이 : "+p3.age+"<br>");
+        document.write("성별 : "+p3.gender+"<br>");
+        document.write(p1.play());
+
+        let person = [p1,p2,p3];
+
+        console.log(person[0]);
+        console.log(person[0].age);
+        </script>
+    
+</body>
+</html>

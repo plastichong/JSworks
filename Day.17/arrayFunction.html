@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array function</title>
+</head>
+<body>
+    <script>
+
+        let arr = ["a","b","c","d","e"]
+        let arr2 = [1,2,3,4,5]
+        
+        document.write(arr+"<br>");
+        document.write(arr.toString()+"<br>");
+        document.write(arr2.toString()+"<br>");
+        document.write(arr2);
+        
+        
+        
+        
+        
+        console.log(arr);
+        console.log(arr.toString());
+        
+
+        // arr = arr.toString();
+        for(let item in arr){
+            console.log(arr[item]);
+        }
+
+
+        let num = [15,33,4,11,54,99];
+
+        num = num.sort(function(a,b){
+            return a-b
+        })
+
+        console.log(num);
+
+        num = num.reverse();
+        console.log(num);
+
+    </script>
+    
+</body>
+</html>

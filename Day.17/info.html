@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>생성자</title>
+</head>
+<body>
+    <script>
+        function Info(subject,creadit){
+            this.subject = subject;
+            this.creadit = creadit;
+
+            this.printOut = function(){
+                return this.subject+", "+this.creadit;
+            }
+        }
+
+        let info = new Info("html",1);
+        let info2 = new Info("css",2)
+
+        console.log(info.printOut());
+        console.log(info2.printOut());
+
+        let infoList = [info, info2]
+
+    </script>
+    
+</body>
+</html>

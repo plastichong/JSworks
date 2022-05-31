@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date객체</title>
+</head>
+<body>
+    <h2>Date 객체</h2>
+<p>현재 날짜와 시간 표시</p>
+<p id = "demo"></p>
+<p>특정한 날짜와 시간</p>
+<p id = "demo2"></p>
+    <script>
+
+        const date = new Date() //매개변수 오늘날짜는 생략
+        
+        console.log(date);
+        console.log(date.toLocaleDateString());
+        console.log(date.toLocaleTimeString());
+        console.log(date.toLocaleString());
+
+        // const theDay = new Date("2022-5-9")
+        const theDay = new Date(2022,4,9,10,10)
+
+        document.getElementById("demo").innerHTML = date.toLocaleString();
+        document.getElementById("demo2").innerHTML = theDay.toLocaleString()
+
+
+
+    </script>
+    
+</body>
+</html>
