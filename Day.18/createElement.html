@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            position: fixed;
+            top: 10px;
+            left: 100px;
+            width: 100px;
+            height: 100px;
+            background-color: #718c00;
+        }
+        </style>
+        
+        <script>
+            window.onload = function(){
+
+                
+                let bt = document.getElementById("bt");
+                bt.addEventListener("click",function(){
+                    let newDiv = document.createElement("div")
+                    let newP = document.createElement("p")
+                    let text = document.createTextNode("자바스크립트")
+                    
+                    newP.appendChild(text);
+                    newDiv.appendChild(newP);
+                    document.body.appendChild(newDiv);
+                    
+                },{once:true})
+            }
+            
+        </script>
+</head>
+<body>
+    <button id = "bt">요소 생성</button>
+
+</body>
+</html>

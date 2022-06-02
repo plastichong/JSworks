@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        #outer{
+            background-color: cornflowerblue;
+            padding: 20px;
+        }
+        #inner{
+            background-color: darkviolet;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "outer">
+        <p id = "inner"></p>
+    </div>
+
+    
+    <script>
+
+        let outer = document.getElementById("outer");
+        let inner = document.getElementById("inner");
+
+        //이벤트 리스너
+        
+        // outer.addEventListener("click",function(){
+        //     alert("outer!")
+        // })
+        // inner.addEventListener("click",function(){
+        //     alert("inner!")
+        //     event.stopPropagation();
+        // })
+
+        outer.onclick = function(event){
+            alert("outer!")
+
+        }
+
+        inner.onclick = function(event){
+            alert("inner!")
+            event.stopPropagation();
+        }
+
+
+    </script>
+</body>
+</html>

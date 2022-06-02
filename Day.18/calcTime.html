@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>시간(초)을 시, 분, 초로 환산</h3>
+    <p id = "demo"></p>
+
+    <script>
+        const DATE = new Date();
+
+        let time = DATE.getTime();
+        let min = 0;
+        let sec = 0;
+        let hour = 0;
+        let day = 0;
+
+        
+        min = Math.floor(time/60);
+        sec = time%60;
+        hour = Math.floor(min/60);
+        min = min%60;
+        
+        // day = Math.floor(hour/24);
+        // hour = hour%24
+
+
+
+        let result = day+"일"+hour+"시"+min + "분 "+sec+"초";
+
+        document.getElementById("demo").innerHTML = result ;
+
+
+        // console.log(Math.round(DATE.getTime()/24/60/60/1000));
+
+
+    </script>
+    
+</body>
+</html>
