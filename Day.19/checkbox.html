@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox 이벤트</title>
+</head>
+<body>
+
+    <input type="checkbox" id = "myCheck">checkbox
+    <button id = "cb">check</button>
+    <button id = "ub">uncheck</button>
+    
+
+
+
+    <script>
+
+        let check = document.getElementById("myCheck");
+
+        let cb = document.getElementById("cb");
+        let ub = document.getElementById("ub");
+
+        cb.addEventListener("click",function(){
+            check.checked = true;
+        })
+        ub.addEventListener("click",function(){
+            check.checked = false;
+        })
+
+
+    </script>
+    
+</body>
+</html>

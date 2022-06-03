@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            width: 600px;
+            margin: 0 auto;
+        }
+        div{border: 1px solid #aaa;padding: 10px;}
+        button{
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>location 객체</h2>
+        <div class = "display">
+            
+            <script>
+                    //url(uniform resource licator)경로
+                document.write("<p><b>location.href : </b>"+location.href + "</P>");
+                    //호스트 
+                document.write("<p><b>location.host : </b>"+location.host + "</P>");
+                    //프로토콜
+                document.write("<p><b>location.protocol : </b>"+location.protocol + "</P>");
+            </script>
+        </div>
+        <button onclick = "window.open('target:blank').location.href = 'http://www.hrd.go.kr'">고용노동부</button>
+        <button onclick = "window.open('target:blank').location.href = 'major.html'">수강신청</button>
+    </section>
+</body>
+</html>

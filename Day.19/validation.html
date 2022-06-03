@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="login.jsp" method="post" name = "login">
+        <div><label for="id">아이디</label><input type="text" name = "id" id = "id"></div>
+        <div><label for="pw">비밀번호</label><input type="password" name="pw" id = "pw"></div>
+        <div><input type="button" value="확인" onclick="checkLogin()"></div>
+
+    </form>
+    
+    <script>
+     
+
+            function checkLogin(){
+
+                let login = document.login;
+                let id = login.id;   
+                let pw = login.pw;
+                
+                if(id.value.length < 4 || 15 < id.value.length){
+                    alert("아이디는 4~15자")
+                    id.focus();
+                    return false;                    
+                }
+                else if (pw.value == ""){
+                    alert("비밀번호를 입력해주세요")
+                    pw.focus();
+                    return false;
+                }else{
+                    login.submit();
+                }
+
+                
+            }
+        
+    </script>
+</body>
+</html>

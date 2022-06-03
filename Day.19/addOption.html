@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            event.preventDefault();
+            
+
+            let form = document.form;
+            const d = new Date();
+            let year = d.getFullYear();
+
+            for (let i = 1970; i <= year; i++){
+                form.y.add(new Option(i,i));
+            }
+
+            for (let i = 1; i <=12; i++) {
+                form.m.add(new Option(i,i));                
+            }
+            console.log(form.y[53]);
+            console.log(form.y.length);
+            // form.sub.length = 4;
+
+
+            
+            
+                        let bt = document.buttom;
+                        bt.addEventListener("click",function(){
+                            form.m.add(new Option(1,10))
+                        })
+        }
+    </script>
+    <style>
+        form{width: 600px;}
+        button{width: 300px;}
+    </style>
+</head>
+<body>
+    <form action="#" method="post" name = "form">
+        <select name="y" id="">
+            <option value="#">--년도 선택--</option>
+        </select>
+        <select name="m" id="">
+            <option value="#">--월 선택--</option>
+        </select>
+        <select name="sub" id="">
+            <option value="#">--과목 선택--</option>
+            <option value="#">html</option>
+            <option value="#">css</option>
+            <option value="#">javascript</option>
+        </select>
+
+        <button name = "button">add</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div{
+            width: 150px;
+            height: 150px;
+            background-color: steelblue;
+        }
+    </style>
+</head>
+<body>
+    <button id = "bt">요소 생성</button>
+
+    
+
+    <script>
+
+function createEle(){
+
+    let bt = document.getElementById("bt");
+    
+    function popup(){
+        let newD = document.createElement("div")
+        let newA = document.createElement("a")
+        let text = document.createTextNode("아이콕스")
+        newA.appendChild(text)
+        newA.setAttribute("href",'http://icoxpublish.com')
+        newA.setAttribute("target","_blank")
+        newA.setAttribute("title","새창")
+        newD.appendChild(newA)
+        
+        document.body.appendChild(newD)
+    }
+    bt.onclick = popup;   
+}
+    addEventListener("load",createEle)
+    </script>
+</body>
+</html>
