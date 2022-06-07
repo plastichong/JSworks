@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JS/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            $("#bt1").on("click",function(){
+                $("p").append("<b>addText </b>")
+            })
+
+            let i = $("ol").children().length+1;
+            // children().length 자식요소의 갯수를 받아옴,
+            // i 에 대입시키고 증가시키며 li와 출력함
+            $("#bt2").on("click",function(){
+                $("ol").append("<li>"+i+"</li>")
+                i ++;
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <p>이것은 문단입니다.</p>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+    <div>
+        <button id = "bt1">add text</button>
+        <button id = "bt2">add item</button>
+    </div>
+    
+</body>
+</html>

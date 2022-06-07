@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JS/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            $("input:text").css("background","red")
+            $("input:password").css("background","orange")
+            $(":button").css({"background":"yellow", "margin":"2px 0"})
+            $("input:checked + label").css("background","green")
+            $("option:selected").css("color","blue")
+            $("textarea:disabled").css("background","pink")
+
+
+        })
+    </script>
+</head>
+<body>
+    <div><input type="text"></div>
+    <div><input type="password"></div>
+    <div><button>확인</button></div>
+    <div><input type="checkbox" class = "css" checked><label for="css">css</label></div>
+
+    <div>
+        <select name="" id="">
+            <option value="">과목선택</option>
+            <option value="">javascript</option>
+            <option selected>JQuery</option>
+        </select>
+        <textarea name="" id="" cols="20" rows="5" disabled>javascript</textarea>
+    </div>
+
+</body>
+
+</html>

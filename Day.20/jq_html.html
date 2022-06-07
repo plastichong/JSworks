@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html()사용</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+
+            
+
+                $(".add").on("click",function(){
+                    $(".pic").css("display","block")
+                    $(".pic").html("<img src='./images/cat.jpg'>")
+                    $("img").css({"margin-top":"10px","border-radius":"5px"})
+                })
+               
+          
+                $(".bt").on("click",function(){
+                    $(".pic").fadeOut();
+                })
+              
+          
+        });
+    </script>
+    <style>
+        /* img{margin-top: 10px;border-radius: 5px;} */
+    </style>
+</head>
+<body>
+    <a href="#" class = "add">사진 보기</a>
+    <a href="#" class = "bt">사진 닫기</a>
+    <div class = "pic"></div>
+    
+</body>
+</html>

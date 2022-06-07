@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 - 기본 선택자</title>
+    <script src="./JS/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("*").css("background","skyblue")
+            // $("h2").css("color","#ffff00")
+            $("h2").css({"font-family" : "headline", "color" : "#ffff00"})
+
+
+            $("#demo").css("font-size","1.2em")
+            $(".list li").css("list-style","none")
+            $(".list li").css("margin","10px")
+
+            $(".list li:odd").css("background","#ccc")
+            $(".list li:even").css("background","yellow")
+            $(".list li:first").css("color","red")
+            $(".list li:last").css("color","blue")
+        })
+    </script>
+</head>
+<body>
+    <h2>제이쿼리 선택자</h2>
+    <p id = "demo">아이디 선택자</p>
+    <ul class = "list">
+        <li>봄</li>
+        <li>여름</li>
+        <li>가을</li>
+        <li>겨울</li>
+    </ul>
+    
+    
+</body>
+</html>
