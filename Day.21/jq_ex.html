@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리(jquery)</title>
+    <script src="./JS/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){/*제이쿼리 실행환경*/
+
+            $("body").css("background","lightgray")
+            $("#intro").css("color","darkblue")
+
+            $("#bt").one("click",function(){
+                $(".info").append("<p>나는 시인이 되고싶었어요</p>")
+                
+            })
+
+            $("#bt2").one("click",function(){
+                $(".pic").html("<img src ='./images/cat.jpg'>")
+            })
+
+            $("#msg p").text("썩어가는 마음의 상처를 위하여")
+            $("#msg p").css({
+                "color":"darkblue",
+                "font-weight":"bold",
+                "font-size":"20px"
+            })
+
+
+            console.log($("#intro").text());
+            //text()함수는 선택한 요소의 내용을 변경하거나 반환함
+
+        })
+    </script>
+</head>
+<body>
+    <h2>왜 또 아픈상처에 소금을 뿌리십니까</h2>
+    <div class = "info">
+        <p id = "intro">내게도 꿈은 있었습니다</p>
+    </div>
+    <p><button id = "bt">click</button></p>
+    <button id = "bt2">click</button>
+    <div class = "pic"></div>
+    <div id = "msg"><p></p></div>
+    
+</body>
+</html>

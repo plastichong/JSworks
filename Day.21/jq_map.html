@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jq_map</title>
+    <script src = "./JS/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            let city = ["서울","대전","대구","부산"]
+
+            let newCity = $.map(city,function(el,i){
+                if(i > 2){
+                    return el;
+                }
+            })
+            console.log(newCity);
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

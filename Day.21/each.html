@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>each() method</title>
+    <script src="./JS/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+
+            $("button").on("click",function(){
+                $("li").each(function(index,element,value){
+
+                    // alert($(this).text())
+                    // console.log($(this).text());
+                    let arr = $(this).text()
+                    console.log(index,element,value);
+
+                    
+                })
+                
+
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <button>알림창 실행</button>
+
+    <ul>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+    
+</body>
+</html>

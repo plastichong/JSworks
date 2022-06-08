@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JS/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+
+
+            $(".bt1 > a").on("mouseover",function(){
+                let p = $(this);
+                p.parent().next().show();
+                p.css("background","pink")
+            })
+            $(".bt1 > a").on("mouseout",function(){
+                let p = $(this);
+                p.parent().next().hide();
+                p.css("background","white")
+            })
+
+            $(".bt2").on("mouseover",function(){
+                $(".ul2").css({"display":"block"});
+            })
+            $(".bt2").on("mouseout",function(){
+                $(".ul2").css({"display":"none"});
+            })
+
+            
+
+        })
+    </script>
+    <style>
+        .wrap a{text-decoration: none;}
+        .wrap .ul1, .ul2{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class = "wrap">
+        <p class = "bt1"><a href="#">학교안내</a></p>
+        <ul class = "ul1">
+            <li>학교장인사말</li>
+            <li>학교연혁</li>
+            <li>찾아오시는길</li>
+        </ul>
+        <p class = "bt2"><a href="#">학교생활</a></p>
+        <ul class = "ul2">
+            <li>공지사항</li>
+            <li>가정통신문</li>
+            <li>동아리활동</li>
+        </ul>
+    </div>
+    
+</body>
+</html>

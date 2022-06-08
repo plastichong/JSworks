@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="./JS/jquery-3.6.0.js"></script>
+<script>
+    $(function(){
+        $("#m1").children().css("border","2px solid red")
+        $("#m2").children().children("span").css("border","2px solid orange")
+        $("#m2 span").parent().css("border","2px solid black")
+        $("#m4 > .m").nextUntil("em").css("border","2px solid green")
+        $("#m5 > span").filter(".m").css("border","2px solid blue")
+        $("#m6 > div").has("span").css("border","2px solid navy")
+        $("#m6 > .d1").next().css("border","2px solid hotpink")
+
+
+
+
+
+    })
+
+
+</script>
+
+<style>
+    *{
+        margin: 5px;padding: 1px;
+
+        
+    }
+</style>
+</head>
+<body>
+    <div id = "m1">
+        <a href="#">내용1-1</a><span>내용1-2</span>
+    </div>
+    <div id = "m2">
+        <div>
+            <a href="#">내용2-1</a><span>내용2-2</span>
+        </div>
+    </div>
+    <div id = "m3"><div><span>내용3-1</span></div></div>
+    <div id = "m4">
+        <span class = "m">내용4-1</span>
+        <span>내용4-2</span>
+        <span>내용4-3</span>
+        <em>내용4-4</em>
+    </div>
+    <div id = "m5">
+        <span class = "m">내용5-1</span>
+        <span>내용5-2</span>
+        <span>내용5-3</span>
+    </div>
+    <div id = "m6">
+        <div class = "d1"><span>내용6-1</span></div>
+        <div>내용6-2</div>
+    </div>
+    
+</body>
+</html>
