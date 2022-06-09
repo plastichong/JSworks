@@ -1,0 +1,19 @@
+*{margin: 0;}
+body{overflow: hidden;}
+#con1{
+    height: 100px;
+    background: #718c00;
+    transform: translateX(-98%);
+    transition: all 0.5s ease;
+}
+#con2{
+    height: 100px;
+    background-color: #cc3300;
+    transform: translateX(98%);
+    transition: all 0.5s ease;
+
+}
+
+#con2.on, #con1.on{
+    transform: translateX(0);
+}

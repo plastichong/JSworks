@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JS/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="./CSS/window.css">
+    
+    <script>
+        $(document).ready(function(){
+
+            $(window).resize(function(){
+
+                if($(this).width() < 960){
+                    $("header").addClass("bg")
+                }else{
+                    $("header").removeClass("bg")
+                }
+            })
+
+            $(window).scroll(function(){
+
+                if($(this).scrollTop() > $("header").height()){
+                    $("#quick").addClass("on")
+                }else{
+                    $("#quick").removeClass("on")
+                    
+                }
+            })
+
+
+        })
+
+    </script>
+</head>
+<body>
+    <div id = "wrap">
+        <header></header>
+    </div>      
+    <div id = "quick">QUICK</div>  
+</body>
+</html>

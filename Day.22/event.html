@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JS/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+
+            $("#m1 button").on("click",function(){
+                alert("이벤트 연결1")
+            })
+            $("#m2").on("click","button",function(){
+                alert("이벤트 연결2")
+            })
+
+            $("#m3 button").on("mouseenter",function(){
+                $(this).toggleClass("on")
+            }).on("mouseleave",function(){
+                $(this).toggleClass("on")
+            })
+
+            
+            function showEvent(){
+                alert("이벤트 연결3")
+            }
+            $("#m4 button").on("click",showEvent)
+
+            $("#m5 button").on("click",function(){
+                alert("이벤트 제거")
+            }).off()
+
+            $("#m6 button").one("click",function(){
+                alert("이벤트 한 번만 연결")
+            })
+
+            $("#m7").on("click",function(){
+                $("p",this).css("background","#f00")
+            })
+
+        })
+        
+    </script>
+<style>
+    *{margin: 5px;}
+    .on{background-color: #f60;color: white;}
+</style>
+</head>
+<body>
+    <div id = "m1">
+        <button>클릭1</button>
+    </div>
+    <div id = "m2">
+        <button>클릭2-1</button>
+        <button>클릭2-2</button>
+    </div>
+    <div id = "m3">
+        <button>클릭3</button>
+    </div>
+    <div id = "m4">
+        <button>클릭4</button>
+    </div>
+    <div id = "m5">
+        <button>클릭5</button>
+    </div>
+    <div id = "m6">
+        <button>클릭6</button>
+    </div>
+    <div id = "m7">
+        <p>클릭7</p>
+    </div>
+    
+
+</body>
+</html>
