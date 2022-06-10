@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JS/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            $("#control a").on("click",function(){
+                let num = Number($(this).text()-1);
+                $(this).addClass("on").siblings().removeClass("on")
+                $("#pic > div").filter(":visible").stop(true).fadeOut(350).end()
+                .eq(num).stop(true).fadeIn(350)
+            })
+
+
+            // $("#control a:first").add("#pic > div:first").show();
+
+        })
+    </script>
+    <link rel="stylesheet" href="./CSS/effect.css">
+</head>
+<body>
+    <div id = "visual">
+        <div id = "pic">
+            <div>
+                <img src="./images/f1.jpg" alt="1">
+            </div>
+            <div>
+                <img src="./images/f2.jpg" alt="2">
+            </div>
+            <div>
+                <img src="./images/f3.jpg" alt="3">
+            </div>
+            <div>
+                <img src="./images/f4.jpg" alt="4">
+            </div>
+        </div>
+        <div id = "control">
+            <ul>
+            <a href="javascript:;">1</a>
+            <a href="javascript:;">2</a>
+            <a href="javascript:;">3</a>
+            <a href="javascript:;">4</a>
+                        
+            </ul>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -15,4 +15,21 @@
     margin-top: -150px;
 }
 
-.subject
+.tip{
+    width: 250px;
+    height: 30px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 20px;
+    position: absolute;
+    opacity: 0;
+    top: 300px;
+    left: 350px;
+    transition: all 0.1s ease;
+}
+.tip.on{
+    opacity: 0.8;
+}
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JS/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            //1
+            $("button:eq(0)").on("click",function(){
+                $(".m0").animate({left:500},"fast","swing").animate({left:0},"slow","swing")
+            })
+            //2
+            $("button:eq(1)").on("click",function(){
+                $(".m1").animate({left:500},"slow","swing").animate({left:0},"fast","swing"
+                ,function(){
+                    $(".m1 span").animate({top:30},"slow","swing").delay(1000).animate({top:-30},"fast","swing")
+                })
+            })
+            //3
+            $("button:eq(2)").on("click",function(){
+                $(".m2").animate({left:"+=200"},"slow","swing")
+
+            })
+            //4
+            $("button:eq(3)").on("click",function(){
+                $(".m3").animate({width:"toggle"},"slow","swing")
+            })
+
+
+
+        })
+
+    </script>
+    <style>
+        *{margin: 5px;}
+        div{
+            width: 100px;
+            height: 100px;
+            background: #f60;
+            position: relative;
+        }
+        .m1{overflow: hidden;}
+        .m1 span{
+            position: relative;
+            top: -50px;
+        }
+    </style>
+</head>
+<body>
+    
+    <button>animate1</button>
+    <div class = "m0"></div>
+    <button>animate2</button>
+    <div class = "m1"><span>애니메이션</span></div>
+    <button>animate3</button>
+    <div class = "m2"></div>
+    <button>animate4</button>
+    <div class = "m3"></div>
+</body>
+</html>

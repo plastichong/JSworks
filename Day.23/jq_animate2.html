@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 효과</title>
+    <script src="./JS/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            let w = $("#gnb ul li").width();
+            $("#gnb").append("<span></span>");
+
+            $("#gnb ul li").on("mouseenter focusin",function(){
+
+                // let idx = $(this).index();
+                // console.log(idx);
+
+                $(this).find("a").addClass("on")
+                $(this).siblings().find("a").removeClass("on")
+                $("#gnb span").stop().animate({left : w*$(this).index()},"slow","swing")    
+            })
+
+
+        })
+    </script>
+   <link rel="stylesheet" href="./CSS/style2.css">
+</head>
+<body>
+    <nav id = "gnb">
+        <ul>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">Javascript</a></li>
+            <li><a href="#">jQuery</a></li>
+        </ul>
+
+    </nav>
+
+    
+</body>
+</html>

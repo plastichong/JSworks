@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./JS/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            
+            $("#title a").on("click",function(event){
+            if($(this).hasClass("on")){
+                $(this).add("#list").removeClass("on")
+            }else{
+                $(this).add("#list").addClass("on")
+            }
+            
+
+            })
+
+
+
+
+
+            // $("html").on("click",function(event){
+            //     $(this).add("#list").removeClass("on")
+            // })
+
+        })
+    </script>
+    <link rel="stylesheet" href="./CSS/event.css">
+</head>
+<body>
+    <div id = "select">
+        <div id = "title"><a href="#">사이트 이동</a></div>
+        <ul id = "list">
+            <li><a href="http://www.naver.com" target="_blank">네이버</a></li>
+            <li><a href="http://www.daum.net" target="_blank">다음</a></li>
+            <li><a href="http://www.nate.com" target="_blank">네이트</a></li>
+        </ul>
+    </div>
+    <div id = "con"></div>
+    
+</body>
+</html>

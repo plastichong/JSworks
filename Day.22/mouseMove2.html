@@ -8,12 +8,15 @@
     <script src="./JS/jquery-3.6.0.js"></script>
     <script>
          $(document).ready(function(){
-        $(document).mousemove(function(event){
+        $(".subject, .tip").mousemove(function(event){
             
           let x = event.pageX 
           let y = event.pageY
+          $(".tip").addClass("on").css({"top":y-40,"left":x+10})
 
-        });
+        }).mouseleave(function(){
+            $(".tip").removeClass("on")
+        })
         
     });
     </script>
