@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax 예제</title>
+    <script src="./JS/jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+
+            $("button").on("click",function(){
+                $.ajax({
+                    url : "test.txt", //파일 경로
+                    dataType : "text", //데이터 타입
+                    success : function(data){//data 자리 매개변수
+                        $("#demo").html("<h2>"+data+"</h2>").css({color : "#00f"})
+                    },
+                    error : function(xhr){
+                        console.log(xhr.status+"/"+xhr.errText);
+                    }
+                })
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <div id = "demo">
+        <h2>let jquery Ajax Change This Text</h2>
+    </div>
+    <p><button type="button">click</button></p>
+
+    
+</body>
+</html>
