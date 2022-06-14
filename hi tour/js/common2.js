@@ -3,31 +3,92 @@
 $(document).ready( function() {
 	//fadeoOut 시간 설정
 
+	let isOver1 = [false, false, false, false,];
+	let isOver2 = [false, false, false, false,];
+
+
+
+
 	function goHide(){
-		for (let i = 1; i <= 4; i++) {
-			$(".gnb_depth2_"+i).fadeOut("fast")
+		for (let i = 0; i <= 4; i++) {
+			if(!isOver1[i] && !isOver2[i]){
+				$(".gnb_depth2_"+(i+1)).stop().fadeOut("fast")
+			}
 
 		}
 
 	}
 
 
-	$(".openAll1").mouseover(function(){
-		if ( parseInt($('header').css('width')) > 800 )
-			$(".gnb_depth2_1").fadeIn("fast")
-	}).focus(function(){
-		if ( parseInt($('header').css('width')) > 800 )
-		$(".gnb_depth2_1").fadeIn("fast")
-	}).mouseout(function(){
-		$(".gnb_depth2_1").fadeOut("fast")
-	}).blur(function(){
-		$(".gnb_depth2_1").fadeOut("fast")
-	})
-
-	// $(".gnb_depth2_1").mouseover(function(){
+	// $(".openAll1").mouseover(function(){
+	// 	if ( parseInt($('header').css('width')) > 800 )
+	// 		$(".gnb_depth2_1").fadeIn("fast")
+	// 		isOver1[0] = true;
+	// }).focus(function(){
 	// 	if ( parseInt($('header').css('width')) > 800 )
 	// 	$(".gnb_depth2_1").fadeIn("fast")
-	// }),mouseo
+	// 	isOver1[0] = true;
+	// }).mouseout(function(){
+	// 	// $(".gnb_depth2_1").
+	// 	setTimeout(goHide,500)
+	// 	isOver1[0] = false;
+	// }).blur(function(){
+	// 	// $(".gnb_depth2_1").
+	// 	setTimeout(goHide,500)
+	// 	isOver1[0] = false;
+	// })
+
+	// // 하위메뉴 over
+	// $(".gnb_depth2_1").mouseover(function(){
+	// 	isOver2[0] = true;
+	// }).focus(function(){
+	// 	isOver2[0] = true;
+	// }).mouseout(function(){
+	// 	isOver2[0] = false;
+	// }).blur(function(){
+	// 	isOver2[0] = false;
+	// })
+
+
+
+
+
+
+
+	$(".openAll1").mouseover(function(){
+		if ( parseInt($('header').css('width')) > 800 )
+			$(".gnb_depth2_1").stop().fadeIn("fast")
+			isOver1[0] = true;
+	}).focus(function(){
+		if ( parseInt($('header').css('width')) > 800 )
+		$(".gnb_depth2_1").stop().fadeIn("fast")
+		isOver1[0] = true;
+	}).mouseout(function(){
+		setTimeout(goHide,500)
+
+		isOver1[0] = false;
+
+	}).blur(function(){
+		setTimeout(goHide,500)
+
+		isOver1[0] = false;
+
+	})
+	$(".gnb_depth2_1").mouseover(function(){
+		isOver2[0] = true;
+	}).focus(function(){
+		isOver2[0] = true;
+	}).mouseout(function(){
+		isOver2[0] = false;
+	}).blur(function(){
+		isOver2[0] = false;
+	})
+
+
+
+
+
+
 
 
 
@@ -37,40 +98,93 @@ $(document).ready( function() {
 	$(".openAll2").mouseover(function(){
 		if ( parseInt($('header').css('width')) > 800 )
 			$(".gnb_depth2_2").stop().fadeIn("fast")
+			isOver1[1] = true;
 	}).focus(function(){
 		if ( parseInt($('header').css('width')) > 800 )
 		$(".gnb_depth2_2").stop().fadeIn("fast")
+		isOver1[1] = true;
 	}).mouseout(function(){
-		$(".gnb_depth2_2").stop().fadeOut("fast")
-	}).blur(function(){
-		$(".gnb_depth2_2").fadeOut("fast")
+		setTimeout(goHide,500)
 
+		isOver1[1] = false;
+
+	}).blur(function(){
+		setTimeout(goHide,500)
+
+		isOver1[1] = false;
+
+	})
+	$(".gnb_depth2_2").mouseover(function(){
+		isOver2[1] = true;
+	}).focus(function(){
+		isOver2[1] = true;
+	}).mouseout(function(){
+		isOver2[1] = false;
+	}).blur(function(){
+		isOver2[1] = false;
 	})
 
 	$(".openAll3").mouseover(function(){
 		if ( parseInt($('header').css('width')) > 800 )
 			$(".gnb_depth2_3").stop().fadeIn("fast")
+			isOver1[2] = true;
 	}).focus(function(){
 		if ( parseInt($('header').css('width')) > 800 )
 		$(".gnb_depth2_3").stop().fadeIn("fast")
+		isOver1[2] = true;
 	}).mouseout(function(){
-		$(".gnb_depth2_3").stop().fadeOut("fast")
-	}).blur(function(){
-		$(".gnb_depth2_3").fadeOut("fast")
+		// $(".gnb_depth2_3").stop().fadeOut("fast")
+		setTimeout(goHide,500)
 
+		isOver1[2] = false;
+
+	}).blur(function(){
+		// $(".gnb_depth2_3").fadeOut("fast")
+		setTimeout(goHide,500)
+
+		isOver1[2] = false;
+
+	})
+	$(".gnb_depth2_3").mouseover(function(){
+		isOver2[2] = true;
+	}).focus(function(){
+		isOver2[2] = true;
+	}).mouseout(function(){
+		isOver2[2] = false;
+	}).blur(function(){
+		isOver2[2] = false;
 	})
 
 	$(".openAll4").mouseover(function(){
 		if ( parseInt($('header').css('width')) > 800 )
 			$(".gnb_depth2_4").stop().fadeIn("fast")
+			isOver1[3] = true;
 	}).focus(function(){
 		if ( parseInt($('header').css('width')) > 800 )
 		$(".gnb_depth2_4").stop().fadeIn("fast")
+		isOver1[3] = true;
 	}).mouseout(function(){
-		$(".gnb_depth2_4").stop().fadeOut("fast")
-	}).blur(function(){
-		$(".gnb_depth2_4").fadeOut("fast")
+		// $(".gnb_depth2_4").stop().fadeOut("fast")
+		setTimeout(goHide,500)
 
+		isOver1[3] = false;
+
+	}).blur(function(){
+		// $(".gnb_depth2_4").fadeOut("fast")
+		setTimeout(goHide,500)
+
+		isOver1[3] = false;
+
+
+	})
+	$(".gnb_depth2_4").mouseover(function(){
+		isOver2[3] = true;
+	}).focus(function(){
+		isOver2[3] = true;
+	}).mouseout(function(){
+		isOver2[3] = false;
+	}).blur(function(){
+		isOver2[3] = false;
 	})
 
 
