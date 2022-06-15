@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+            $(".num input").on("click",function(){
+                let display = $(".display").val();
+
+                display += $(".num input").val()
+
+                console.log($(".num input").val());
+            })
+        })
+    </script>
+    <style>
+        input{box-sizing: border-box;margin: 2px 0;}
+        input[type="button"]{
+            padding: 10px;
+            width: 50px;
+            height: 50px;
+        }
+        input[type="text"]{
+            width: 216px;
+            height: 50px;
+            padding: 10px;
+            text-align: right;
+        }
+        .carl{
+            margin: 0% auto;
+            width: 250px;
+        }
+      
+        .op input{
+            width: 106px;
+        }
+        input.c{width: 161px;}
+    </style>
+</head>
+<body>
+
+    <div class = carl>
+
+        <form action="">
+            <input type="text" class = "display">
+            <input type="button" value="c" class = "c">
+            <input type="button" value="x">
+            <div class = "num">
+                <input type="button" value="7">
+                <input type="button" value="8">
+                <input type="button" value="9">
+                <input type="button" value="/">
+                <input type="button" value="4">
+                <input type="button" value="5">
+                <input type="button" value="6">
+                <input type="button" value="-">
+                <input type="button" value="1">
+                <input type="button" value="2">
+                <input type="button" value="3">
+                <input type="button" value="+">
+            </div>
+           <div class = "op">
+               <input type="button" value=".">
+                <input type="button" value="=">
+            </div>
+
+        </form>
+
+
+    </div>
+    
+</body>
+</html>

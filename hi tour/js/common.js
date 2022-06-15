@@ -168,10 +168,11 @@ $(document).ready( function() {
 	});	
 	$('.gnb_depth2_4').blur(function(){
 		isOver2222 = false;
-		setTimeout("goHide4()",200);
+		setTimeout("goHide4()",200); 
 	});	
     
 	//모바일 메뉴 띄움
+	//토글 ㄱㄱ
 	$('.openMOgnb').click(function(){
 		$('header').addClass('on');
 		$('header .header_cont').slideDown('fast');
@@ -184,6 +185,7 @@ $(document).ready( function() {
         $("body").unbind('touchmove');
 	});
 	
+
 });
 
 

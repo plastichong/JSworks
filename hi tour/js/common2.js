@@ -7,54 +7,15 @@ $(document).ready( function() {
 	let isOver2 = [false, false, false, false,];
 
 
-
-
 	function goHide(){
 		for (let i = 0; i <= 4; i++) {
 			if(!isOver1[i] && !isOver2[i]){
 				$(".gnb_depth2_"+(i+1)).stop().fadeOut("fast")
 			}
-
 		}
-
 	}
 
-
-	// $(".openAll1").mouseover(function(){
-	// 	if ( parseInt($('header').css('width')) > 800 )
-	// 		$(".gnb_depth2_1").fadeIn("fast")
-	// 		isOver1[0] = true;
-	// }).focus(function(){
-	// 	if ( parseInt($('header').css('width')) > 800 )
-	// 	$(".gnb_depth2_1").fadeIn("fast")
-	// 	isOver1[0] = true;
-	// }).mouseout(function(){
-	// 	// $(".gnb_depth2_1").
-	// 	setTimeout(goHide,500)
-	// 	isOver1[0] = false;
-	// }).blur(function(){
-	// 	// $(".gnb_depth2_1").
-	// 	setTimeout(goHide,500)
-	// 	isOver1[0] = false;
-	// })
-
-	// // 하위메뉴 over
-	// $(".gnb_depth2_1").mouseover(function(){
-	// 	isOver2[0] = true;
-	// }).focus(function(){
-	// 	isOver2[0] = true;
-	// }).mouseout(function(){
-	// 	isOver2[0] = false;
-	// }).blur(function(){
-	// 	isOver2[0] = false;
-	// })
-
-
-
-
-
-
-
+	//1
 	$(".openAll1").mouseover(function(){
 		if ( parseInt($('header').css('width')) > 800 )
 			$(".gnb_depth2_1").stop().fadeIn("fast")
@@ -84,16 +45,7 @@ $(document).ready( function() {
 		isOver2[0] = false;
 	})
 
-
-
-
-
-
-
-
-
-
-
+	//2
 
 	$(".openAll2").mouseover(function(){
 		if ( parseInt($('header').css('width')) > 800 )
@@ -123,6 +75,8 @@ $(document).ready( function() {
 	}).blur(function(){
 		isOver2[1] = false;
 	})
+	
+	//3
 
 	$(".openAll3").mouseover(function(){
 		if ( parseInt($('header').css('width')) > 800 )
@@ -154,6 +108,8 @@ $(document).ready( function() {
 	}).blur(function(){
 		isOver2[2] = false;
 	})
+
+	//3
 
 	$(".openAll4").mouseover(function(){
 		if ( parseInt($('header').css('width')) > 800 )
