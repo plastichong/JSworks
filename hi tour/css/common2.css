@@ -272,8 +272,8 @@ footer .foot_area .snslink li + li + li a {background-image:url(../img/ico_insta
 .bbsListTbl td.tit_notice {text-align:left;}
 .bbsListTbl td:nth-child(1) {width:10%;}
 .bbsListTbl td:nth-child(2) {width:55%;}
-.bbsListTbl td:nth-child(3) {width:15%;}
-.bbsListTbl td:nth-child(4) {width:20%;}
+/* .bbsListTbl td:nth-child(3) {width:15%;} */
+/* .bbsListTbl td:nth-child(4) {width:20%;} */
 .pagination {padding:40px 0 0; text-align:center;}
 .pagination a {display:inline-block; }
 .pagination a.pbtn {display:inline-block; padding:7px; text-align:center; vertical-align:middle; font-size:0;}
@@ -449,7 +449,10 @@ h1.loginTit a img {width:100%;}
 	.about_area h2 b {display:block; padding-top:10px;}
 	.about_area .about_box {background:#fff;}
 	.about_area .place_list {}
-	.about_area .place_list li {float:none; width:100%; margin:0; box-sizing:border-box; padding:0 20px; top:0;}
+	.about_area .place_list li {
+		float:none; 
+		width:100%;
+		 margin:0; box-sizing:border-box; padding:0 20px; top:0;}
 	.about_area .place_list li p.txt {padding:10px 50px 30px; line-height:1.4;}
     .about_area .place_list li .view {padding-bottom: 10px; margin:0 0 30px;}
 
