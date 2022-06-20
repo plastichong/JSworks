@@ -24,12 +24,12 @@
             
             
             let newImg = document.createElement("img");
-            let src = document.createAttribute("src");
+            // let src = document.createAttribute("src");
             let alt = document.createAttribute("alt")
             alt.value = "커피잔"
-            src.value = "./images/coffee-gray.jpg";
-            newImg.setAttributeNode(src);
-            newImg.setAttributeNode(alt);
+            // src.value = "./images/coffee-gray.jpg";
+            newImg.setAttribute("src","./images/coffee-gray.jpg");
+            newImg.setAttribute("alt","커피잔");
             
 
             info.appendChild(newP);

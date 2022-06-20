@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.js"></script>
+    <script>
+        $(function(){
+        let v = ""
+        let firstNum = 0;
+        let secondnum = 0;
+        let op = ""
+        let result = ""
+        $(".op").on("click",function(){
+            op = $(this).val()
+            v += $(this).val()
+            $(".display").val(v)
+        })
+        $(".num").on("click",function(){
+            v += $(this).val()
+            $(".display").val(v)
+            if(!op){
+                firstNum += $(this).val()
+            }else if (op){
+                secondnum += $(this).val()
+            }
+            parseInt(firstNum)+parseInt(secondnum)
+        })
+        $(".result").on("click",function(){
+                if(op === "+"){
+                    result = parseInt(firstNum)+parseInt(secondnum);
+                }else if(op === "-"){
+                    result = parseInt(firstNum)-parseInt(secondnum);
+                }else if(op === "*"){
+                    result = parseInt(firstNum)*parseInt(secondnum);
+                }else if(op === "/"){
+                    result = parseInt(firstNum)/parseInt(secondnum);
+                }
+            v += " = "+result;
+            $(".display").val(v)
+            console.log(firstNum);
+            console.log(secondnum);
+            console.log(result);
+            console.log(typeof(result));
+        })
+        $(".clear").on("click",function(){
+            v = " "
+            firstNum = 0;
+            secondnum = 0;
+            $(".display").val(v)
+            console.log(v);
+            op = false
+        })
+    })
+    
+    </script>
+    <style>
+        *{box-sizing: border-box;}
+        .outer{
+            width: 500px;
+            position: relative;
+            margin: 0% auto;
+            height: 500px;
+        }
+        .cal{
+            width: 240px;
+            margin: 20px auto;
+            background-color: rgb(224, 189, 189);
+            text-align: center;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        input{
+            width: 50px;
+            height: 50px;
+            margin: 3px 0;
+            border: 2px solid #000;
+        }
+        .display{
+            width: 216px;
+            text-align: right;
+            padding-right: 10px;
+        }
+        .clear{width: 160px;background-color:dodgerblue;}
+        .result{width: 106px;background-color: dodgerblue;}
+        .op{background-color: rgb(153, 224, 121);}
+
+        input:hover{box-shadow: 1px 1px 1px;}
+    </style>
+</head>
+<body>
+    <div class = "outer">
+        <div class = "cal">
+                <input type="text" class = "display" readonly id = "c" value="">
+                <input type="button" value = "c" class = "clear">
+            <input type="button" value = "/" class ="op">
+            <input type="button" value = "1" class = "num">
+            <input type="button" value = "2" class = "num">
+            <input type="button" value = "3" class = "num">
+        <input type="button" value = "*" class ="op">
+        <input type="button" value = "4" class = "num">
+        <input type="button" value = "5" class = "num">
+        <input type="button" value = "6" class = "num">
+        <input type="button" value = "+" class ="op">
+        <input type="button" value = "7" class = "num">
+        <input type="button" value = "8" class = "num">
+        <input type="button" value = "9" class = "num">
+        <input type="button" value = "-" class ="op">
+        <input type="button" value = ".">
+        <input type="button" value = "0" class = "num">
+        <input type="button" value = "=" class = "result">
+    </div>
+</div>
+</body>
+</html>
