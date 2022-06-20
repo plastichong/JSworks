@@ -1,0 +1,86 @@
+*{margin: 0;padding: 0;}
+body{
+}
+.nav1{
+    width: 100%;
+    background: #fcdf33;
+}
+nav ul{
+    list-style: none;
+    padding: 5px;
+    font-size: 14px;
+    margin: 0 10%;
+}
+ul li a{
+    color: rgba(0,0,0,.6);
+    text-decoration: none;
+}
+.upper{
+    box-sizing: border-box;
+    height: 37px;
+    display: flex;
+    line-height: 26px;
+    justify-content: space-between;
+}
+
+.line{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+
+}
+.upper li{
+    margin: 0 5px;
+}
+
+
+
+.lower{
+    box-sizing: border-box;
+    display: flex;
+    height: 62px;
+    line-height: 52px;
+}
+.lower li  {
+    margin-right: 5px;
+}
+
+.lower li span{
+    font-size: 2em;
+}
+
+.content .banner{
+    height: 162px;
+    line-height: 162px;
+    text-align: center;
+}
+.lower input{
+    position: absolute;
+    text-align: center;
+    top: 52px;
+    right:10% ;
+    width: 212px;
+    height: 34px;
+    border-radius: 17px;
+    box-sizing: border-box;
+    border: 1px solid #fcdf33 ;
+    /* font-size: 14px; */
+}
+.nav2{
+    position: relative;
+}
+.nav2 ul{
+    display: flex;
+    justify-content: left;
+}
+.nav2 ul li{
+    margin-top: 17px;
+    height: 38px;
+    line-height:38px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+    font-size: 16px;
+}
+.bold{
+    color: #000;
+}
