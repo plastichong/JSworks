@@ -7,18 +7,48 @@
     <title>Document</title>
     <script>
 
-        let john = {name:"john", surname:"smith", id:1}
-        let pete = {name:"pete", surname:"hunt", id:2}
-        let mary = {name:"mary", surname:"key", id:3}
+let factorial = function(number) {
+  if (number > 0) {
+    return number * factorial(number - 1);
+  } else {
+    return 1;
+  }
+};
+let factorial2 = function(number) {
+  if (number > 0) {
+    return number * factorial(number - 1);
+  } else {
+    return 1;
+  }
+};
 
-        let users = [john,pete,mary]
 
-        let usersMapped = users.map(user =>({
-            fullName : '{user.name}{user.surname}'
-            id : user.id
 
-        }))
-        console.log(usersMapped);
+
+
+console.log(factorial(3));
+console.log(factorial(4));
+
+factorial(3); // 6
+factorial(4); // 24
+
+
+
+sayHello()
+
+function sayHello(){
+  console.log("hello");
+}
+
+
+
+
+
+
+
+
+
+
 
     </script>
 </head>

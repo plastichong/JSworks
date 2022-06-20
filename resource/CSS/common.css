@@ -1,0 +1,259 @@
+*{margin: 0; padding: 0;}
+
+#container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+main{width: 100%;margin: 10px auto;}
+
+header{
+  height:100px;   
+}
+ 
+#topMenu{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    background-color: rgb(19, 99, 19);
+}
+#topMenu h1{
+    text-align: center;
+     line-height: 90px;
+
+}
+
+.openMOgnb{
+    position: absolute;
+    bottom: 10px;
+}
+.closePop{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+.closePop span{
+  display: none;
+  box-sizing:border-box; display:block; width:25px; height:3px; 
+    margin-bottom:4px; border-radius:10px; background:rgb(255, 255, 255);
+}
+.openMOgnb span {
+    box-sizing:border-box; display:block; width:25px; height:3px; 
+    margin-bottom:4px; border-radius:10px; background:#fff;
+}
+
+#topMenu2{
+    font-size: 16px;
+    background-color: rgb(19, 99, 19);
+    margin: 0;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    display: none;
+}
+ #logo{
+     margin-left: 20px ;
+     font-size: 1.3em;
+}
+
+#logo a{text-decoration: none;color: yellow;}
+ 
+
+#topMenu li a{text-decoration: none;color: white;}
+#topMenu li {list-style: none; margin: 0 10px; height: 50px;line-height: 50px;}
+
+/* index style */
+
+#content section div{margin: 7px;}
+#content section div p{line-height: 2em;}
+#healing img, #activity img{border-radius: 20px;width: 360px;}
+#content section #schedule ul{line-height: 2em;list-style: none;}
+#content #activity{height: 600px;}
+#activity{margin-top: 60px;}
+#content h2, h3, p{margin-left: 10px;}
+#schedule li{margin-left: 5px;}
+#schedule h3{margin-left: 5px;}
+#healing img, #activity img{
+    width: 100%;
+}
+
+
+
+#sightseeing ul li{margin: 10px 30px; list-style: square;}
+#sightseeing ul li a{text-decoration: none;}
+#sightseeing{height: 200px;}
+
+
+
+footer{
+    width: 100%;
+    border-top: 1px solid #222; 
+    bottom: 20px;   
+}
+#bottomMenu{
+    height: 10px;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 10px 5px 20px 5px;
+}    
+
+
+#bottomMenu a{text-decoration: none;color: rgb(30, 38, 53);}
+#bottomMenu li:last-child{border:none;}
+
+
+
+/* product 스타일 */
+#product img{width: 360px; margin-left: 5px;}
+#description, #receipe{width: 100%;height:400px;}
+    #package{width: 100%;margin-left:0;}
+    
+    #product table, th, td{
+        border: 1px solid #ccc; 
+        border-collapse: collapse; padding: 10px 20px;
+       
+    }
+    #tbl_package{box-sizing: border-box; width: 100%;}
+    
+    #receipe{
+     }
+    
+        #receipe ol{
+        padding-left: 20px;
+    }
+    
+    
+/* board 스타일 */
+#QA{height: 600px;width: 100%;}
+#board{width: 100%;}
+#board h2{margin: 30px 10px;}
+
+#tbl_board{
+            border: 1px solid #ccc; border-collapse: collapse;
+            width:100%;text-align: center; margin:5px;box-sizing:border-box;
+}
+
+
+#tbl_board thead{background-color: #eee;}
+
+#intro h1, h2{text-align: center; margin: 10px;}
+
+
+
+
+
+
+
+/* 미디어 쿼리 */
+
+@media screen and (min-width:600px) {
+
+    .openMOgnb{display: none;}
+    .closePop{display: none;}
+
+    #topMenu h1{
+        text-align: left;
+        height: 50px;
+        line-height: 50px;
+        display:flex;
+    }
+
+    
+    #topMenu2{
+        display: flex;
+        justify-content:end;
+        align-items: center;
+        text-align: center;
+     }
+     #topMenu2 li{margin: 0 15px;
+        line-height: 20px;
+    }
+    main{width:1000px; margin:30px auto;}
+
+    /* index 스타일 */
+    
+    #content section div{margin: 30px 10px 40px 10px;}
+    #content section div p{line-height: 2em;}
+    #healing img, #activity img{
+    float: left; margin-right: 20px;
+    border-radius: 20px; 
+    width: 400px;
+}
+    #content section #schedule ul{line-height: 2em;
+        list-style: none;}
+    
+    #content #activity{height: 300px;}
+    #activity{margin-top: 60px;}
+    
+    /* sightseeing 스타일*/
+    
+    #sightseeing ul li{margin: 10px 30px; list-style: square;}
+    #sightseeing ul li a{text-decoration: none;}
+    /* footer 스타일 */
+    footer{
+        width: 1000px;margin: 30px auto;
+        border-top: 1px solid #222; 
+        }
+    
+    #bottomMenu{
+        list-style: none; 
+        margin:10px 10px 10px 30px; 
+        }
+    
+    #bottomMenu li{
+        border-right: 1px solid #aaa;
+        display: inline-block;
+        margin: 10px 0;
+        padding: 0 10px;
+        text-overflow: initial;
+    }
+    #bottomMenu li:last-child{border:none;}
+    
+    #bottomMenu li a{text-decoration: none; color: rgb(30, 38, 53);}
+    
+    
+    /* product 스타일 */
+    #product p{line-height: 2;}
+    #product h2{margin: 10px;}
+    #description{
+        border: 1px solid #ccc; 
+        padding: 20px 60px; width: 800px; margin: 0 auto; border-top-right-radius: 30px;
+        border-top-left-radius:30px ;}
+    #description, #receipe, #package{margin-bottom: 20px;}
+    #description img{border-radius: 5px; margin: 10px;}
+    
+    #receipe{
+        border: 1px solid #ccc; margin: 20px auto;
+        padding: 20px 60px;width: 800px;}
+    
+        #receipe ol{
+        padding-left: 20px;
+    }
+    
+    #package{
+        border: 1px solid #ccc; 
+        padding: 20px 60px ;width: 800px; margin: 20px auto;
+        border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;}
+    
+    #product table, th, td{
+        border: 1px solid #ccc; 
+        border-collapse: collapse; padding: 10px 20px;
+    }
+    
+    /* board 스타일 */
+    #QA{height: 600px;}
+    
+    #board h2{margin: 30px 10px;}
+    
+    #tbl_board{border: 1px solid #ccc; border-collapse: collapse;
+        width: 800px; margin-left: 40px; text-align: center;}
+    #tbl_board thead{background-color: #eee;}
+   
+
+}
